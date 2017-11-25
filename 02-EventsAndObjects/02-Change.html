@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>On Change</h1>
+
+    <input type="text" onchange="show(this)">
+    <span id="err"></span>
+
+    <script>
+            function show(obj){
+                // alert("Change Called");
+                if(obj.value == ""){
+                    document.getElementById("err").innerHTML = "You cannot leave this field blank";
+                }
+                else{
+                    document.getElementById("err").innerHTML = obj.value;
+                }
+                
+            }
+        </script>
+    </body>
+    </html>

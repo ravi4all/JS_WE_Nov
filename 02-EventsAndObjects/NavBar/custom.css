@@ -1,0 +1,58 @@
+#header.active #main-navigation{
+    left: 0%;
+}
+#header.active #menu-btn {
+    left: 300px;
+}
+
+#menu-btn {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 1s;
+    outline: none;
+}
+
+#menu-btn .line {
+    display: block;
+    border: 2px solid red;
+    margin-bottom: 2px;
+    width: 25px;
+    transition: 1s;
+}
+
+#header.active #menu-btn .line:first-child {
+    transform: rotate(45deg);
+}
+
+#header.active #menu-btn .line:last-child {
+    transform: rotate(-45deg);
+    margin-top: -12px;
+}
+
+#header.active #menu-btn .line:nth-child(2) {
+    opacity: 0;
+}
+
+#main-navigation {
+    position: absolute;
+    width: 20%;
+    left: -100%;
+    transition: 1s;
+}
+#main-navigation ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#main-navigation ul li a{
+    display: block;
+    padding: 15px;
+    background-color: lightgray;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #000;
+}

@@ -14,6 +14,7 @@ function init(){
     userName.addEventListener("blur", blankCheck);
     userPwd.addEventListener("keyup", pwdStrength);
     confPwd.addEventListener("keyup", confirmPwd);
+    userMail.addEventListener("keyup", checkMail);
 }
 
 function blankCheck(){
@@ -55,4 +56,21 @@ function confirmPwd(){
     else {
         span[3].innerHTML = "Password do not Match";
     }
+}
+
+function checkMail(){
+    str = userMail.value;
+    if(!isValid(str)){
+        span[1].innerHTML = "Not Valid";
+        console.log(isValid(str));
+    }
+    else {
+        span[1].innerHTML = "Valid";
+        console.log(isValid(str));
+    }
+}
+
+function isValid(str){
+    // return (/^\s*$/.test(str.value))
+    return (/(\w+[@]+\w+[.]+\w+)$/.test(str))
 }
